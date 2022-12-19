@@ -25,7 +25,10 @@ class _learningscreenState extends State<learningscreen> {
     var url = Uri.parse(
         'http://178.128.63.131:3001/get-user-experiments/${widget.userid}');
     var response = await client.get(url, headers: headers);
-    print("hello hii ${response.body}");
+    var value = jsonDecode(response.body);
+    dataResponse = value;
+    var experiment  = value["Message"][0]["title"];
+    print("hello hii ${experiment}");
   }
 
   @override

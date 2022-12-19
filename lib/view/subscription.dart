@@ -163,7 +163,7 @@ class _SubscriptionState extends State<Subscription> {
                       padding: const EdgeInsets.only(left: 15.0,right: 10),
                       child: InkWell(
                         onTap: (){
-                          navigateTo(context,learningscreen() );
+                          navigateTo(context,learningscreen(recievedtoken: m.token,userid: m.user!.uuid,) );
                         },
                         child: Row(
                           children: [
